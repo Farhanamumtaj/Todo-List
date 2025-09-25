@@ -1,0 +1,106 @@
+body{
+      font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-container,
+.display-container{
+  display : grid;
+  grid-template-columns: 250px 150px 90px;
+  column-gap: 10px;
+  row-gap: 10px;
+  align-items: center;
+}
+
+.input-container{
+  margin-bottom: 10px;
+  align-items: stretch;
+}
+
+.name-input,
+.date-input{
+  padding: 7px;
+  font-size: 15px;
+}
+
+.date-input::before{
+  content : 'Due date';
+  color: #999;
+}
+
+.date-input:focus::before,
+.date-input:valid::before{
+  content : '';
+}
+
+
+.add-btn{
+  background-color : green;
+  color : white;
+  font-size: 15px;
+  border : none;
+  cursor: pointer;
+}
+
+.delete-btn{
+  background-color: darkred;
+  color : white;
+  border : none;
+  font-size: 15px;
+  height : 38px;
+  cursor: pointer;
+}
+
+@media screen and (max-width:370px) {
+  body{
+    font-size: 7px;
+  }
+  .input-container,
+  .display-container{
+    display : grid;
+    grid-template-columns: 30% 30% 15%;
+    column-gap: 3px;
+    row-gap: 3px;
+    align-items: center;
+  }
+
+  .input-container{
+    margin-bottom: 3px;
+    align-items: stretch;
+  }
+
+  .name-input,
+  .date-input{
+    padding: 2px;
+    font-size: 7px;
+  }
+
+  .date-input::before{
+    content : 'Due date';
+    color: #999;
+  }
+
+  .date-input:focus::before,
+  .date-input:valid::before{
+    content : '';
+  }
+
+
+  .add-btn{
+    background-color : green;
+    color : white;
+    font-size: 7px;
+    border : none;
+    cursor: pointer;
+    padding: 1px;
+  }
+
+  .delete-btn{
+    background-color: darkred;
+    color : white;
+    border : none;
+    font-size: 7px;
+    height : 12px;
+    cursor: pointer;
+    padding: 1px;
+  }
+}
